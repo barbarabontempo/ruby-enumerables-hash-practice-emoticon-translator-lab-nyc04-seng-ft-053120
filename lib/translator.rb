@@ -3,43 +3,43 @@
  require "yaml"
  require 'pry'
 
-# def load_library(file_path)
-#   # code goes here
-#   emoticon = YAML.load_file(file_path)
-#   result = {}
+def load_library(file_path)
+  # code goes here
+  emoticon = YAML.load_file(file_path)
+  result = {}
   
-#   emoticon.each do |key, value|
-#   result[key] = {}
-#   result[key][:english] = emoticon[key][0]
-#   result[key][:japanese] = emoticon[key][1]
-#   end
-#   #binding.pry
-#   result
-# end
+  emoticon.each do |key, value|
+  result[key] = {}
+  result[key][:english] = emoticon[key][0]
+  result[key][:japanese] = emoticon[key][1]
+  end
+  #binding.pry
+  result
+end
 
 
-# def get_japanese_emoticon(file_path, emoticon)
-#   # code goes here
-# emoji = load_library(file_path)
+def get_japanese_emoticon(file_path, emoticon)
+  # code goes here
+emoji = load_library(file_path)
  
-# emoji.each do |key, value|
-#   if emoji[key][:english] == emoticon 
-#     return emoji[key][:japanese]
-#   end
-# end
-# "Sorry, that emoticon was not found"
-# end
+emoji.each do |key, value|
+  if emoji[key][:english] == emoticon 
+    return emoji[key][:japanese]
+  end
+end
+"Sorry, that emoticon was not found"
+end
 
-# def get_english_meaning(file_path, emoticon)
-# emoji = load_library(file_path)
-# emoji.each do |key, value|
-#   if emoji[key][:japanese] == emoticon
-#     #binding.pry
-#     return key
-#   end
-# end
-# "Sorry, that emoticon was not found"
-# end
+def get_english_meaning(file_path, emoticon)
+emoji = load_library(file_path)
+emoji.each do |key, value|
+  if emoji[key][:japanese] == emoticon
+    #binding.pry
+    return key
+  end
+end
+"Sorry, that emoticon was not found"
+end
 
 
 
