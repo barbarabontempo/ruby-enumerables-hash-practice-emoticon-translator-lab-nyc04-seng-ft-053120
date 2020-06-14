@@ -45,43 +45,43 @@
 
 
 
-def load_library(path)
-   new_library ={}
-   library = YAML.load_file(path)
-   library.each do | emotion , emoticon |
-    new_library[emotion] ={:english => emoticon[0] , :japanese => emoticon[1]}
-    end
-  new_library
-end
+# def load_library(path)
+#   new_library ={}
+#   library = YAML.load_file(path)
+#   library.each do | emotion , emoticon |
+#     new_library[emotion] ={:english => emoticon[0] , :japanese => emoticon[1]}
+#     end
+#   new_library
+# end
 
-def get_japanese_emoticon(path, emoticon)
-    results = nil
-    sorted_library = load_library(path)
-    sorted_library.each do | key, value |
-    if emoticon == value[:english]
-       #binding.pry
-        return value[:japanese]
-    else 
-        results = "Sorry, that emoticon was not found"
-      end
-    end
-    results
-   # binding.pry
-end
+# def get_japanese_emoticon(path, emoticon)
+#     results = nil
+#     sorted_library = load_library(path)
+#     sorted_library.each do | key, value |
+#     if emoticon == value[:english]
+#       #binding.pry
+#         return value[:japanese]
+#     else 
+#         results = "Sorry, that emoticon was not found"
+#       end
+#     end
+#     results
+#   # binding.pry
+# end
 
-def get_english_meaning(path,emoticon) 
-    results = nil
-    sorted_library = load_library(path)
-    sorted_library.each do | key, value |
-     if emoticon == value[:japanese]
-       return key
-     else
-       results = "Sorry, that emoticon was not found"
-       #binding.pry
-      end
-    end
-    results
-end
+# def get_english_meaning(path,emoticon) 
+#     results = nil
+#     sorted_library = load_library(path)
+#     sorted_library.each do | key, value |
+#     if emoticon == value[:japanese]
+#       return key
+#     else
+#       results = "Sorry, that emoticon was not found"
+#       #binding.pry
+#       end
+#     end
+#     results
+# end
 
 
 
